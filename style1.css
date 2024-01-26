@@ -1,0 +1,158 @@
+body{
+     font-family: "Open Sans";
+}
+footer{
+     padding: 25px;
+     background-color: rgb(167, 252, 11);;
+     height: 50px;
+     border-radius: 20px;
+}
+input[type="button"]{
+     
+     background-color:  rgb(167, 252, 11);;
+     border-radius: 20px;
+     border: 1px none;
+     padding: 10px 30px;
+     color: white;
+     font-size: large;
+     outline-color: #ed350c;
+          }
+input[type="button"]:hover{
+               background-color: green;
+               cursor:pointer;
+           }
+#get_started{
+     background-color:  rgb(167, 252, 11);
+     border-radius: 20px;
+     border: 1px none;
+     padding: 10px 30px 10px;
+     color: white;
+     font-size: large;
+     outline-color: #ed350c;
+
+}
+#get_started:hover{
+     background-color: green;
+      cursor:pointer;
+}
+.h3-green-line {
+     height: 4px;
+     width: 130px;
+     background-color: rgb(167, 252, 11);
+     margin: 18px 0;
+ }
+ .nav_line{
+     height:20px;
+     width:100%;
+     background-color: rgb(167, 252, 11);
+ }
+ .header_calc{
+     background-image: url("https://img.freepik.com/free-photo/blur-hospital-clinic-interior_74190-5203.jpg?w=2000");
+     height: 120px;
+     width: 100%;
+     
+ }
+ h2 {
+     color:black;
+     font-size: 35px;
+     display: table-cell;
+     vertical-align: middle;
+     width: 600px;
+     line-height: 1;
+     font-weight: 600;
+ }
+
+ .card{
+     height: 75px;
+     width: 200px;
+     position: relative;
+     margin: 10px;
+ }
+ input[type="radio"]{
+     -webkit-appearance: none;
+     appearance: none;
+     background-color: white;
+     height: 100%;
+     width: 100%;
+     border-radius: 10px;
+     position: absolute;
+     box-shadow: 7px 7px 15px rgba(2,28,53,0.08);
+     cursor: pointer;
+     outline: none;
+ }
+ input[type="radio"]:before{
+     content: "";
+     position: absolute;
+     height: 22px;
+     width: 22px;
+     background-color: ;
+     border: 1px solid ;
+     border-radius: 50%;
+     top: 35px;
+     right: 20px;
+ }
+ input[type="radio"]:after{
+     content: "";
+     position: absolute;
+     height: 13px;
+     width: 13px;
+     background-color: transparent;
+     border-radius: 50%;
+     top: 39.5px;
+     right: 24.5px;
+ }
+ label{
+     position: absolute;
+     margin: 20px;
+     cursor: pointer;
+ }
+ h5{
+     font-weight: 600;
+     font-size: 18px;
+     letter-spacing: 0.5px;
+     margin: 15px 0 20px 0;
+ }
+ h2{
+     font-size: 28px;
+ }
+ span{
+     font-weight: 400;
+     font-size: 18px;
+     color: #7b7b93;
+ }
+ input[type="radio"]:hover{
+     transform: scale(1.05);
+ }
+ input[type="radio"]:checked{
+     border: 3px solid  rgb(167, 252, 11);
+ }
+ input[type="radio"]:checked:after{
+     background-color:  rgb(167, 252, 11);
+ }
+ .styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+}
+#first_name,#last_name,
+#age,#weight,#height{
+    background-color: greenyellow;
+     width:6cm;
+     padding: 12px;
+     margin: 5px;
+     border-radius: 10px;
+     border:1px solid green;
+     border:2px none greenyellow;
+}
+
+
+
+
+ 

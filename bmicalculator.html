@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+
+<html>
+     
+     <head>
+          <div class="header_calc">
+          <div class="nav_line"><br><br>
+               <h2>BMI Calculator</h2>
+          </div></div>
+          <title>BMI Calculator</title>
+          
+          <link rel="stylesheet" href="style1.css">
+
+          
+     </head>
+     <body><br>
+        <form>
+          Please Enter your Name:<br>
+          <input type="text" id="first_name" placeholder="First name">&nbsp;
+          <input type="text" id="last_name" placeholder="Last name"><br><br>
+          Please Enter your Age:<br>
+          <input type="number" id="age" placeholder="age"><br><br>
+          Please select your Gender:<br>
+          <div class="card">
+               <input type="radio" name="gender" value="Male" id="card1">
+               <label for="card1">
+                   <h5>MALE</h5>
+               </label><br><br><br>
+           </div>
+           <div class="card">
+               <input type="radio" name="gender" value="Female" id="card2" checked>
+               <label for="card2">
+                   <h5>FEMALE</h5>
+                   </label><br><br><br>
+           </div>
+           <div class="card">
+               <input type="radio" name="gender" value="Other" id="card3">
+               <label for="card3">
+                   <h5>OTHER</h5>
+                   </label><br><br><br>
+           </div><br>
+           Please Enter your Height(m):<br>
+           <input type="text" id="height" placeholder=""><br><br>
+           Please Enter your Weight(kg):<br>
+           <input type="text" id="weight" placeholder=""><br><br>
+
+           <input type="button" value="submit" onclick="displayRadioValue();displayNameValue();displayAgeValue();displayHeightValue();displayWeightValue();calculateBMI()">
+               
+           </button><br>
+
+           <script>
+               let weight = '';
+               function displayRadioValue() {
+                   var ele = document.getElementsByName('gender');
+          
+                   for(i = 0; i < ele.length; i++) {
+                       if(ele[i].checked)
+                       document.getElementById("result").innerHTML
+                               = ele[i].value;
+                   }
+               }
+               function displayNameValue() {
+                    var name_value1 = document.getElementById('first_name');
+                    document.getElementById("result1").innerHTML
+                    =name_value1.value;
+                    
+                    var name_value2 = document.getElementById('last_name');
+                    document.getElementById("result2").innerHTML
+                    =name_value2.value;
+                    
+               }
+               function displayAgeValue(){
+                    var age_value = document.getElementById('age');
+                    document.getElementById("result3").innerHTML
+                    =age_value.value;
+               }
+               function displayHeightValue(){
+                    var height_value = document.getElementById('height');
+                    document.getElementById("result4").innerHTML
+                    =height_value.value;
+               }
+               function displayWeightValue(){
+                    var weight_value = document.getElementById('weight');
+                    document.getElementById("result5").innerHTML
+                    =weight_value.value;
+                    weight =weight_value.value;
+               }
+               function calculateBMI() {
+                    const he =  parseFloat(document.getElementById('height').value);
+                    const we =  parseFloat(document.getElementById('weight').value);
+                    var BMI = we/(he*he);
+                    num=BMI.toFixed(2);
+                    console.log(num);
+                    document.getElementById("greeting").innerHTML = num;
+                    alert("Your BMI is "+ num);
+
+                    
+
+               }
+               
+           </script>
+           <br>
+           
+           <center><table border="1px" class="styled-table">
+                    <tr><td  style="width:150px;height:50px">Gender:</td>
+                         <td  style=width:150px;height:50px><div id="result"></div></td></tr>
+                    
+                    <tr><td style="width:150px;height:50px">First Name:</td>
+                         <td style="width:150px;height:50px"><div id="result1"></div></td></tr>
+                    
+                    <tr><td style="width:150px;height:50px">Last Name:</td>
+                         <td style="width:150px;height:50px"><div id="result2"></div></td></tr>
+                    
+                    <tr><td style="width:150px;height:50px">Age:</td>
+                         <td style="width:150px;height:50px"><div id="result3"></div></td></tr>     
+                    
+                    <tr><td style="width:150px;height:50px">Height:</td>
+                         <td style="width:150px;height:50px"><div id="result4"></div></td></tr>
+                    
+                    <tr><td style="width:150px;height:50px">Weight:</td>
+                         <td style="width:150px;height:50px"><div id="result5"></div></td></tr>
+                    </table></center><br><br><br>
+
+                    <center><h1>Your BMI is <p id="greeting"></p></h1></center>
+                    <center> <table border="1" class="styled-table" >
+                         <tr style="width:150px;height:50px">
+                              <th>BMI</th>
+                              <th>Classification</th>
+                              <th>Health Risk</th>
+                         </tr>
+                         <tr>
+                              <td> Lesser than 18.5</td><td>Underweight</td><td>Minimal</td>
+                         </tr>
+                         <tr>
+                              <td>18.5-24.9</td><td>Normal</td><td>Minimal</td>
+                         </tr>
+                         <tr>
+                              <td>25-29.9</td><td>Overweight</td><td>Increased</td>
+                         </tr>
+                         <tr>
+                              <td>30-34.9</td><td>Obese</td><td>High</td>
+                         </tr>
+                         <tr>
+                              <td>35-39.9</td><td>Severely Obese</td><td>Very High</td>
+                         </tr>
+                         <tr>
+                              <td>Greater than 40</td><td>Morbidly Obese</td><td>Extremely High</td>
+                         </tr>
+                    </center></table>
+
+                    
+
+           
+
+          
+        </form> 
+     </body>
+</html>
