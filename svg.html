@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Document</title>
+</head>
+<body>
+     <h5>Circle</h5>
+     <svg width ="100" height="100">
+          <circle cx="50" cy="50" r="40" stroke ="red"
+stroke-width ="4" fill = "blue" /></svg>
+
+     <h5>Rectangle</h5>
+     <svg width="400" height="100">
+     <rect width="400" height="100" fill="yellow" stroke="red"
+stroke-width="5" />     </svg>
+
+     <h5>Line</h5>
+     <svg height="210" width="500">
+          <line x1="0" y1="0" x2="150" y2="150"
+          stroke="green" stroke-width="2" />
+     </svg>
+     <h5>Using canvas element</h5>
+     <h6>Drawing a line using script</h6>
+     <canvas id="canvas1" width="400" height="200"
+     style="border:1px solid #000000;">
+           </canvas>
+     <h6>Drawing a Circle using script</h6>
+     <canvas id="canvas2" width="400" height="200"
+     style="border:1px solid #000000;">
+           </canvas>
+     <h6>Drawing a Rectangle using script</h6>
+     <canvas id="canvas3" width="400" height="200"
+     style="border:1px solid #000000;">
+     </canvas>
+     <script>
+          function line(){
+          var c = document.getElementById("canvas1");
+          var ctx = c.getContext("2d");
+          ctx.moveTo(0, 0);
+          ctx.lineTo(400, 200);
+          ctx.stroke();} line();
+
+          function circle(){
+          var c = document.getElementById("canvas2");
+          var ctx = c.getContext("2d");
+          ctx.beginPath();
+          ctx.arc(190, 100, 80, 0, 4 * Math.PI);
+          ctx.stroke();} circle();
+
+          function rectangle(){
+               var c = document.getElementById("canvas3");
+               var ctx = c.getContext("2d");
+               ctx.beginPath();
+               ctx.rect(40, 20, 300, 150);
+               ctx.stroke();}rectangle();
+
+
+          </script>
+<br>
+<br>
+<h4><b>Using audio and video elements</b></h4>
+<audio controls autoplay muted loop>
+     <source src="audio.mp3" type="audio/mp3">
+     Your browser does not support the audio tag.
+ </audio>
+<br>
+<br>
+ <video width="400" height="300" controls autoplay muted loop>
+     <source src="video.mp4" type="video/mp4">
+     Your browser does not support the video tag.
+ </video>
+
+</body>
+</html>
